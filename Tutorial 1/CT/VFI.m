@@ -12,7 +12,6 @@ warning('off','MATLAB:dispatcher:nameConflict')
 
 path = '/Users/ckwolf/Dropbox/Research/Miscellaneous/EABCN_Chile/Slides_CKW/codes/Tutorial 1/CT';
 
-addpath([path '/Auxiliary Functions'])
 addpath([path '/Income Process'])
 cd(path);
 
@@ -59,10 +58,6 @@ grid_y = grid_y';
 
 r_SS     = 0.01;
 r_hat_SS = probdeath + r_SS;
-
-% transfer for MPC distribution
-
-gift = 1;
 
 %% SOLUTION PARAMETERS
 
@@ -271,8 +266,6 @@ clear gg
 lambda = reshape(lambda_st,n_a,n_y);
 lambda_a = sum(lambda,2);
 dist_y = da_tilde'*lambda;
-    
-%% STEADY-STATE STATISTICS: COMPUTATIONS
 
 %% STEADY-STATE STATISTICS: PLOTS
 
